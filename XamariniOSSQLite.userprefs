@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{726618E3-B6E4-413F-8FDB-BEFE28EC2204}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamariniOSSQLite/Student.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="XamariniOSSQLite/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="XamariniOSSQLite/ViewController.cs" Line="33" Column="21" />
-      <File FileName="XamariniOSSQLite/Student.cs" Line="2" Column="14" />
+      <File FileName="XamariniOSSQLite/ViewController.cs" Line="25" Column="17" />
+      <File FileName="XamariniOSSQLite/Student.cs" Line="10" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

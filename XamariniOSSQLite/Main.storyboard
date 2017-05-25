@@ -33,8 +33,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="50" y="220.5" width="500" height="20.5"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="19" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Please Enter Name" textAlignment="center">
+                                <rect key="frame" x="50" y="220.5" width="500" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="20" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" placeholder="Please Enter Age">
+                                <rect key="frame" x="50" y="300.5" width="500" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="21" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="50" y="380.5" width="500" height="30"/>
+                                <state key="normal" title="Insert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnInsert_TouchUpInside:" destination="BYZ-38-t0r" id="35" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="22" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="50" y="460.5" width="500" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,15 +66,27 @@
                             <constraint id="9" firstItem="4" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="50"/>
                             <constraint id="10" firstItem="4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
                             <constraint id="11" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="50"/>
-                            <constraint id="12" firstItem="5" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="50"/>
-                            <constraint id="13" firstItem="5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
-                            <constraint id="14" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="50"/>
+                            <constraint id="23" firstItem="19" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="50"/>
+                            <constraint id="24" firstItem="19" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
+                            <constraint id="25" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="19" secondAttribute="trailing" constant="50"/>
+                            <constraint id="26" firstItem="20" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="50"/>
+                            <constraint id="27" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="50"/>
+                            <constraint id="28" firstItem="20" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
+                            <constraint id="29" firstItem="21" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="50"/>
+                            <constraint id="30" firstItem="21" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
+                            <constraint id="31" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="50"/>
+                            <constraint id="32" firstItem="22" firstAttribute="top" secondItem="21" secondAttribute="bottom" constant="50"/>
+                            <constraint id="33" firstItem="22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
+                            <constraint id="34" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="50"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnCreate" destination="3" id="name-outlet-3"/>
-                        <outlet property="lblPath" destination="5" id="name-outlet-5"/>
                         <outlet property="lblDBName" destination="4" id="name-outlet-4"/>
+                        <outlet property="btnInsert" destination="21" id="name-outlet-21"/>
+                        <outlet property="lblDisplay" destination="22" id="name-outlet-22"/>
+                        <outlet property="txtAge" destination="20" id="name-outlet-20"/>
+                        <outlet property="txtName" destination="19" id="name-outlet-19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

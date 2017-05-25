@@ -19,15 +19,31 @@ namespace XamariniOSSQLite
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnInsert { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblDBName { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lblPath { get; set; }
+        UIKit.UILabel lblDisplay { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtAge { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtName { get; set; }
 
         [Action ("BtnCreate_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnCreate_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("BtnInsert_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnInsert_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -36,14 +52,29 @@ namespace XamariniOSSQLite
                 btnCreate = null;
             }
 
+            if (btnInsert != null) {
+                btnInsert.Dispose ();
+                btnInsert = null;
+            }
+
             if (lblDBName != null) {
                 lblDBName.Dispose ();
                 lblDBName = null;
             }
 
-            if (lblPath != null) {
-                lblPath.Dispose ();
-                lblPath = null;
+            if (lblDisplay != null) {
+                lblDisplay.Dispose ();
+                lblDisplay = null;
+            }
+
+            if (txtAge != null) {
+                txtAge.Dispose ();
+                txtAge = null;
+            }
+
+            if (txtName != null) {
+                txtName.Dispose ();
+                txtName = null;
             }
         }
     }

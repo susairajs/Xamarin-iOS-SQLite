@@ -20,6 +20,11 @@ namespace XamariniOSSQLite
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
+		partial void BtnInsert_TouchUpInside(UIButton sender)
+		{
+			InsertData();
+		}
+
 		partial void BtnCreate_TouchUpInside(UIButton sender)
 		{
 			CreateDB();
@@ -32,14 +37,31 @@ namespace XamariniOSSQLite
 				var db = new SQLiteConnection(DbPath);
 				db.CreateTable<Student>();
 
-				lblDBName.Text = "DB Name:" + DbName;
-				lblPath.Text = "DB Path:" + DbPath;
+				lblDBName.Text = "DB Path:" + DbPath;
 			}
 			catch (Exception e)
 			{
 				Console.WriteLine(e);
 			}
 
+		}
+
+		public void InsertData()
+		{
+			try
+			{
+				string name = txtName.Text;
+				string age = txtAge.Text;
+				var student = new Student { Name = name, Age = age };
+				var db = new SQLiteConnection(DbPath);
+				db.Insert(student);
+				lblDisplay.Text = name + ":" + age;
+				
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+			}
 		}
 
 		public override void DidReceiveMemoryWarning()
