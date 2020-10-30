@@ -30,22 +30,22 @@ namespace XamariniOSSQLite
 			CreateDB();
 		}
 
+		/// Create Database 
 		public void CreateDB()
 		{
 			try
 			{
 				var db = new SQLiteConnection(DbPath);
 				db.CreateTable<Student>();
-
 				lblDBName.Text = "DB Path:" + DbPath;
 			}
 			catch (Exception e)
 			{
 				Console.WriteLine(e);
 			}
-
 		}
 
+		/// Insert Data to Database
 		public void InsertData()
 		{
 			try
